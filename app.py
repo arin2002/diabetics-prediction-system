@@ -1,13 +1,16 @@
 import streamlit as st
 import joblib
+import numpy as np
 
 # Load the trained model
 model = joblib.load('diabetes_model.pkl')
 
 # Function to predict diabetes
+
+
 def predict_diabetes(features):
-    # Reshape the features to match the model's expected input shape
-    features = features.reshape(1, -1)
+    # Convert the features to a NumPy array and reshape it
+    features = np.array(features).reshape(1, -1)
     # Make the prediction
     prediction = model.predict(features)
     # Return the prediction
