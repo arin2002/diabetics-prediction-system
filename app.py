@@ -22,17 +22,25 @@ def main():
     st.title("Diabetes Prediction System")
     st.write("Enter the following information to predict the likelihood of diabetes.")
 
-    # Create input fields for user input
-    pregnancies = st.number_input("Number of Pregnancies", min_value=0, max_value=20, value=0)
-    glucose = st.number_input("Glucose Level", min_value=0, max_value=200, value=100)
-    blood_pressure = st.number_input("Blood Pressure (mm Hg)", min_value=0, max_value=150, value=70)
-    skin_thickness = st.number_input("Skin Thickness (mm)", min_value=0, max_value=100, value=20)
-    insulin = st.number_input("Insulin Level (mu U/ml)", min_value=0, max_value=800, value=79)
+    pregnancies = st.number_input(
+        "Number of Pregnancies", min_value=0, max_value=20, value=0)
+    glucose = st.number_input(
+        "Glucose Level", min_value=0, max_value=200, value=100)
+    blood_pressure = st.number_input(
+        "Blood Pressure (mm Hg)", min_value=0, max_value=150, value=70)
+    skin_thickness = st.number_input(
+        "Skin Thickness (mm)", min_value=0, max_value=100, value=20)
+    insulin = st.number_input(
+        "Insulin Level (mu U/ml)", min_value=0, max_value=800, value=79)
     bmi = st.number_input("BMI", min_value=0, max_value=60, value=25)
+    diabetes_pedigree = st.number_input(
+        "Diabetes Pedigree Function", min_value=0.0, max_value=3.0, value=0.5)
     age = st.number_input("Age", min_value=0, max_value=120, value=30)
 
     # Create a feature array from the user input
-    features = [pregnancies, glucose, blood_pressure, skin_thickness, insulin, bmi, age]
+    features = [pregnancies, glucose, blood_pressure,
+                skin_thickness, insulin, bmi, diabetes_pedigree, age]
+
 
     # Create a button to predict diabetes
     if st.button("Predict"):
