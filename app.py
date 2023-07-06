@@ -95,7 +95,7 @@ def main():
                 '<p style="color:red; font-size:24px;">Warning! You are likely to have diabetes.</p>', unsafe_allow_html=True)
 
     # Add a footer
-    st.markdown('<div class="footer">Made with ❤️ by Your Name</div>',
+    st.markdown('<div class="footer">Made with ❤️ by Arin</div>',
                 unsafe_allow_html=True)
 
 
