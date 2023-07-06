@@ -22,7 +22,37 @@ def predict_diabetes(features):
 def main():
     # Set the title and description
     st.title("Diabetes Prediction System")
-    st.write("Enter the following information to predict the likelihood of diabetes.")
+    st.markdown(
+        """
+        <style>
+        .title {
+            font-family: 'Arial', sans-serif;
+            color: #D42027;
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+        .description {
+            font-family: 'Arial', sans-serif;
+            color: #585858;
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+        .footer {
+            font-family: 'Arial', sans-serif;
+            color: #585858;
+            text-align: center;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+        </style>
+        """, unsafe_allow_html=True
+    )
+
+    st.markdown('<div class="title">Diabetes Prediction System</div>',
+                unsafe_allow_html=True)
+    st.markdown('<div class="description">Enter the following information to predict the likelihood of diabetes.</div>', unsafe_allow_html=True)
 
     # Add some space and set the layout
     st.markdown("---")
@@ -63,6 +93,10 @@ def main():
         else:
             st.markdown(
                 '<p style="color:red; font-size:24px;">Warning! You are likely to have diabetes.</p>', unsafe_allow_html=True)
+
+    # Add a footer
+    st.markdown('<div class="footer">Made with ❤️ by Your Name</div>',
+                unsafe_allow_html=True)
 
 
 # Run the app
