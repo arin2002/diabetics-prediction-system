@@ -21,7 +21,7 @@ def predict_diabetes(features):
 
 def main():
     # Set the title and description
-    st.title("Diabetes Prediction System")
+    # st.title("Diabetes Prediction System")
     st.markdown(
         """
         <style>
